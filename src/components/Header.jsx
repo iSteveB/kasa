@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 const Header = () => {
   return (
     <header className="header">
-      <Logo />
+      <Logo size='large' color='#FF6060'/>
       <Navigation />
     </header>
   );
