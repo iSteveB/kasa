@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
 	return (
 		<nav className='navigation'>
-			<ul>
+			<ul className='navigation__list'>
 				<li>
-          <NavLink className={(navData) => navData.isActive ? 'navigation--active' : ''} end to='/'>Accueil</NavLink>
+          <NavLink className={(navData) => navData.isActive ? 'navigation__list--active' : ''} end to='/'>Accueil</NavLink>
         </li>
 				<li>
-          <NavLink className={(navData) => navData.isActive ? 'navigation--active' : ''} to="/about">À propos</NavLink>
+          <NavLink className={(navData) => navData.isActive ? 'navigation__list--active' : ''} to="/about">A Propos</NavLink>
         </li>
 			</ul>
 		</nav>

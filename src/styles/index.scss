@@ -1,2 +1,8 @@
 @import './bases/reset';
 @import './bases/typo';
+@import './utils/variables';
+
+@import './global';
+
+@import './components/navigation';
+@import './components/header';

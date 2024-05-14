@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <Logo />
       <Navigation />
     </header>

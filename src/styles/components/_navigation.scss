@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 50px;
+    color: $color-secondary;
+    font-size: 1.2rem;
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+  }
+}
