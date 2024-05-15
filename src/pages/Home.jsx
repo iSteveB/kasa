@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 
+import data from '../data/data.json';
+
 const Home = () => {
-  const [data, setData] = useState([]);
+  const [lodging, setLodging] = useState([]);
 
   useEffect(() => {
-    fetch('./src/data/data.json')
-      .then((response) => response.json())
-      .then((data) => setData(data));
+    setLodging(data);
   }, []);
 
   if (!data) {
@@ -19,7 +19,7 @@ const Home = () => {
     <main className="home">
       <Banner />
       <section className="cards-container">
-        {data?.map((item) => (
+        { lodging?.map((item) => (
           <Card key={item.id} data={item} />
         ))}
       </section>
