@@ -2,8 +2,6 @@
 @import './bases/reset';
 @import './bases/typo';
 
-@import './global';
-
 @import './components/navigation';
 @import './components/header';
 @import './components/footer';
@@ -12,4 +10,5 @@
 
 @import './pages/home';
 @import './pages/about';
+@import './pages/cardDetails';
 @import './pages/notFound';
