@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 
 import Tag from '../components/Tag';
+import Carousel from '../components/Carousel';
 
 const CardDetails = () => {
 	const { id } = useParams();
@@ -18,7 +19,7 @@ const CardDetails = () => {
 			{lodging && (
 				<div className='card-details'>
 					<div className='card-details__carousel'>
-						<img src={lodging.cover} alt={lodging.title} />
+						<Carousel lodging={lodging} />
 					</div>
 
 					<div className='card-details__content'>
