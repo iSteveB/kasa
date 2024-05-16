@@ -7,14 +7,15 @@ import CardDetails from '../pages/CardDetails';
 import { Routes, Route } from 'react-router-dom';
 
 const HandleRoutes = () => {
-  return (
-    <Routes>
+	return (
+		<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
-				<Route path='/lodging/:id' element={<CardDetails />} />
+				<Route path='/lodging/:id?' element={<CardDetails />} />
+				<Route path='/not-found' element={<NotFound />} />
 				<Route path='*' element={<NotFound />} />
-			</Routes>
-  );
+		</Routes>
+	);
 };
 
 export default HandleRoutes;

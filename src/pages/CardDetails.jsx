@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import data from '../data/data.json';
 
 import Tag from '../components/Tag';
@@ -9,8 +9,15 @@ const CardDetails = () => {
 	const { id } = useParams();
 	const [lodging, setLodging] = useState([]);
 
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		const filteredLodging = data.filter((item) => item.id === id);
+
+		if(filteredLodging.length === 0) {	
+			navigate('/not-found');
+		}
+		
 		setLodging(filteredLodging[0]);
 	}, [id]);
 
