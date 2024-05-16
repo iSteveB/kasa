@@ -10,5 +10,9 @@ li {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $color-tertiary;
+
+  &:visited {
+    color: inherit;
+  }
 }
