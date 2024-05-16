@@ -1,0 +1,23 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  h1, p {
+    color: $color-secondary;
+  }
+
+  a {
+    color: $color-tertiary;
+    text-decoration: underline;
+  }
+}
