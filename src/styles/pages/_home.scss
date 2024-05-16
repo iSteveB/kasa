@@ -2,7 +2,7 @@
   .cards-container {
     margin: 30px 80px;
     padding: 30px;
-    background: darken($color: $background-color-primary, $amount: 5);
+    background: darken($color: $color-primary, $amount: 5);
     border-radius: 25px;
     display: flex;
     justify-content: center;
