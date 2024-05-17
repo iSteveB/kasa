@@ -4,6 +4,7 @@ import data from '../data/data.json';
 
 import Tag from '../components/Tag';
 import Carousel from '../components/Carousel';
+import Rating from '../components/Rating';
 
 const CardDetails = () => {
 	const { id } = useParams();
@@ -14,10 +15,10 @@ const CardDetails = () => {
 	useEffect(() => {
 		const filteredLodging = data.filter((item) => item.id === id);
 
-		if(filteredLodging.length === 0) {	
+		if (filteredLodging.length === 0) {
 			navigate('/not-found');
 		}
-		
+
 		setLodging(filteredLodging[0]);
 	}, [id]);
 
@@ -43,7 +44,7 @@ const CardDetails = () => {
 						</div>
 
 						<div className='card-details__host'>
-							<div>
+							<div className='card-details__host__info'>
 								<div className='card-details__host__name'>
 									<p>{lodging.host?.name}</p>
 								</div>
@@ -55,17 +56,17 @@ const CardDetails = () => {
 								</div>
 							</div>
 							<div className='card-details__host__rating'>
-								<p>{lodging.rating}</p>
+								<Rating rating={lodging.rating} />
 							</div>
 						</div>
 					</div>
 
-          <div className='card-details__description'>
-            <p>{lodging.description}</p>
-          </div>
-          <div className='card-details__equipments'>
-            <p>{lodging.equipments?.join(', ')}</p>
-          </div>
+					<div className='card-details__description'>
+						<p>{lodging.description}</p>
+					</div>
+					<div className='card-details__equipments'>
+						<p>{lodging.equipments?.join(', ')}</p>
+					</div>
 				</div>
 			)}
 		</main>
