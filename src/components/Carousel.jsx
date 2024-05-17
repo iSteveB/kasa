@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import arrowLeft from '../assets/icons/arrow-left.svg';
+import arrowRight from '../assets/icons/arrow-right.svg';
 
 const Carousel = ({ lodging }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,10 +25,10 @@ const Carousel = ({ lodging }) => {
   const currentPicture = pictures[activeIndex];
 
   return (
-    <div>
-      <span className='previous-button' onClick={handlePreviousClick}> Prev </span>
-      <img src={currentPicture} alt={lodging.title} />
-      <span className='next-button' onClick={handleNextClick}> Next </span>    
+    <div className='carousel'>
+      <span className='carousel__arrow arrow--left' onClick={handlePreviousClick}> <img src={arrowLeft} /> </span>
+      <img className='carousel__picture' src={currentPicture} alt={lodging.title} />
+      <span className='carousel__arrow arrow--right' onClick={handleNextClick}> <img src={arrowRight} /> </span>    
     </div>
   );
 };

@@ -1,0 +1,34 @@
+.carousel {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+  border-radius: 25px;
+  
+  &__picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  & .arrow--left {
+    left: 20px;
+    
+  }
+
+  & .arrow--right{
+    right: 20px;
+  }
+}
