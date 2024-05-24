@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
+import HomeBanner from '../assets/images/banner-img.jpg';
 
 import data from '../data/data.json';
 
@@ -17,7 +18,7 @@ const Home = () => {
 
   return (
     <main className="home">
-      <Banner />
+      <Banner text='Chez vous, partout et ailleurs' image={HomeBanner}/>
       <section className="cards-container">
         { lodging?.map((item) => (
           <Card key={item.id} data={item} />
