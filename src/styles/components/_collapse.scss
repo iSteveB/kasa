@@ -1,0 +1,52 @@
+.collapse {
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    list-style: none;
+    color: $color-primary;
+    background-color: $color-secondary;
+    font-weight: 700;
+    padding: 10px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      content: "";
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      background: no-repeat center url('../assets/icons/arrow.svg');
+      transition: transform 0.2s;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    transition: all .3s ease-in-out;
+    border-radius: 0 0 5px 5px;
+    background-color: darken($color-primary, 1%);
+
+    &__text,
+    &__list {
+      padding: 15px 10px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &.open {
+    & .collapse__content {
+      max-height: 280px;
+      transition: all .3s ease-in-out;
+    }
+
+    & .collapse__title::after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+}

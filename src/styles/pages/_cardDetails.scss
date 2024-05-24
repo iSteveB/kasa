@@ -65,4 +65,15 @@
       border-radius: 50%;
     }
   }
+
+  &__collapse-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 75px 50px 75px;
+    max-width: 1240px;
+
+    &__description, &__equipments {
+      width: 45%;
+    }
+  }
 }

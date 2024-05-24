@@ -5,6 +5,7 @@ import data from '../data/data.json';
 import Tag from '../components/Tag';
 import Carousel from '../components/Carousel';
 import Rating from '../components/Rating';
+import Collapse from '../components/Collapse';
 
 const CardDetails = () => {
 	const { id } = useParams();
@@ -60,12 +61,14 @@ const CardDetails = () => {
 							</div>
 						</div>
 					</div>
-
-					<div className='card-details__description'>
-						<p>{lodging.description}</p>
-					</div>
-					<div className='card-details__equipments'>
-						<p>{lodging.equipments?.join(', ')}</p>
+					
+					<div className='card-details__collapse-container'>
+						<div className='card-details__collapse-container__description'>
+							<Collapse text={lodging.description}  title='Description' />
+						</div>
+						<div className='card-details__collapse-container__equipments'>
+							<Collapse list={lodging.equipments} title='Équipements' />
+						</div>
 					</div>
 				</div>
 			)}
