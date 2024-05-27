@@ -50,4 +50,19 @@
       transform: translateY(-50%) rotate(-180deg);
     }
   }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 0.8rem;
+
+      &::after {
+        background: no-repeat center url('../assets/icons/arrow-small.svg');
+      }
+    }
+
+    &__content__text,
+    &__content__list {
+      font-size: 0.8rem;
+    }
+  }
 }

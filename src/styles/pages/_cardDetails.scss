@@ -53,6 +53,13 @@
       gap: 10px;
     }
 
+    &__rating {
+      & .rating-star {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
     &__name {
       color: $color-secondary;
       max-width: 100px;
@@ -81,8 +88,62 @@
     padding: 0 20px;
 
     &__carousel {
-      margin: 50px 0 40px 0;
+      margin: 0;
       border-radius: 10px;
+    }
+
+    &__content {
+      flex-direction: column;
+      margin: 0;
+      height: 100%;
+
+      &__infos {
+        flex-direction: column;
+        height: 100%;
+        gap: 8px;
+        margin: 10px 0;
+  
+        & h1 {
+          font-size: 1.2rem;
+          color: $color-secondary;
+          font-weight: 500;
+        }
+
+        & p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &__host {
+      flex-direction: row-reverse;
+      align-items: center;
+  
+      &__name {
+       font-size: 0.8rem;
+      }
+  
+      &__picture img {
+        width: 32px;
+        height: 32px;
+      }
+
+      &__rating {
+        & .rating-star {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &__collapse-container {
+      flex-direction: column;
+      gap: 20px;
+      margin: 20px 0;
+  
+      &__description, &__equipments {
+        width: 100%;
+      }
     }
   }
 }
