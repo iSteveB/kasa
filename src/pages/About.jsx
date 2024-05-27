@@ -5,7 +5,7 @@ import AboutBanner from '../assets/images/about_banner.jpg'
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <Banner image={AboutBanner} />
       <div className="faq">
         <Collapse title="Fiabilité" text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." />
