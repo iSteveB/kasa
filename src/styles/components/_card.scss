@@ -8,6 +8,10 @@
   width: 260px;
   height: 260px;
 
+  &:visited {
+    color: white;
+  }
+
   &__title {
     position: absolute;
     bottom: 0px;
@@ -23,5 +27,11 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
   }
 }
